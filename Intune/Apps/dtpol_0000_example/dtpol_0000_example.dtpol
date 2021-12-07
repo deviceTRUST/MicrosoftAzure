@@ -1,0 +1,39 @@
+{
+  "consoleVersion": "20.2.400.0",
+  "username": "SvenJansen",
+  "timestamp": "2021-12-01T12:32:05.165Z",
+  "contexts": [],
+  "actions": [
+    {
+      "id": "cf6daf55-237a-45a4-aaa5-dfbe8a2be2d1",
+      "key": "ACTION_NEW_ACTION",
+      "name": "New Action",
+      "description": "Enter action description",
+      "data": [
+        {
+          "type": "Trigger",
+          "triggers": [
+            "Logon",
+            "Reconnect"
+          ],
+          "filters": [],
+          "tasks": [
+            {
+              "id": "c2415fac-1d62-4d92-ae43-e1f21eeb0867",
+              "type": "Popup Message",
+              "description": "This is a test config! Seems to work!",
+              "toast": false,
+              "message": "This is a test config! Seems to work!",
+              "title": "Hi there!",
+              "triggerButtons": []
+            }
+          ]
+        }
+      ],
+      "enabled": true,
+      "priority": "Medium"
+    }
+  ],
+  "messages": [],
+  "settings": []
+}
