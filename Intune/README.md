@@ -6,3 +6,12 @@ This section contains scripts and elements for bringing the deviceTRUST installa
 ```PowerShell
 Install-Module -Name IntuneWin32App
 ```
+
+```Json
+"Information": {
+    "DisplayName": "AppName 1.0.0",
+    "Description": "Installs AppName 1.0.0",
+    "Publisher": "AppVendor",
+    "Notes": "AppNote"
+}
+```
