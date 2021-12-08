@@ -2,16 +2,5 @@
 # Intune
 This section contains scripts and elements for bringing the deviceTRUST installation and config files to your Intune managed devices. It has been developed based on Nickolaj Andersens (@NickolajA) great "IntuneWin32App" PowerShell Module: https://github.com/MSEndpointMgr/IntuneWin32App. Using the module is a requirement for our config to be applied.
 
-
-```PowerShell
-Install-Module -Name IntuneWin32App
-```
-
-```Json
-"Information": {
-    "DisplayName": "AppName 1.0.0",
-    "Description": "Installs AppName 1.0.0",
-    "Publisher": "AppVendor",
-    "Notes": "AppNote"
-}
-```
+# Support
+All content in our GitHub account is released as-is. deviceTRUST does not provide any warranty and no support for any content found here. If you have any issues or comments, please file an issue on the repository.

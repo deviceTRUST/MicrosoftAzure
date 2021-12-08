@@ -10,7 +10,12 @@ if(-NOT (Get-Module IntuneWin32App)){Import-Module IntuneWin32App}
 if(-NOT (Get-Module AzureAD)){Import-Module AzureAD}
 
 Connect-MSIntuneGraph -TenantID 07c7e7f5-210d-4fc6-bd6d-929caf1e3b61
-if(-NOT (Get-AzureADTenantDetail)){$AzureADConnect = Connect-AzureAD}
+
+try 
+{ $var = Get-AzureADTenantDetail } 
+
+catch [Microsoft.Open.Azure.AD.CommonLibrary.AadNeedAuthenticationException] 
+{ Write-Host "You're not connected."; Connect-AzureAD}
 
 # Package MSI as .intunewin file / Verbose switch is optional
 $SetupFile = (Get-ChildItem $InputFolder| Where-Object{$_.Extension -eq ".cmd"}).Name
