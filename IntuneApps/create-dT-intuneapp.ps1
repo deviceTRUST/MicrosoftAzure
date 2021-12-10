@@ -193,7 +193,7 @@ if($UninstallGroup -ne $null -and $AppID -ne $null){
     
     if($UninstallGroupID = (Get-AzureADGroup | Where-Object{$_.DisplayName -eq [string]$UninstallGroup}).ObjectID){
 
-        Add-IntuneWin32AppAssignmentGroup -Include -ID $AppID -GroupID $UninstallGroupID -Intent required -Notification hideall | Out-Null
+        Add-IntuneWin32AppAssignmentGroup -Include -ID $AppID -GroupID $UninstallGroupID -Intent uninstall -Notification hideall | Out-Null
 
     }
 
