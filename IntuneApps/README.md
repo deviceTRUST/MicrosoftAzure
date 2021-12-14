@@ -28,7 +28,7 @@ Connect-MSGraph -AdminConsent
 The script `create-dT-intuneapp.ps1` creates an Intune application based on your given iput type. Please see the inline comments for details. 
 
 The following parameters need to be set when executing the script. 
-```PowerShell
+```
 $InputFolder --> Path to your sources. Can either be a folder containing policy content or any of our software components.
 $SoftwareType --> The application type to be created needs to be set. Properties and requirements differ for each kind. Possible values:
 - dtclient
