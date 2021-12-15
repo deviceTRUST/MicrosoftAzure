@@ -65,6 +65,8 @@ The tool for *.intunewin-file creation does always add all files in the folder t
 ```
 The script does automatically scan all child folders of $InputFolder and choses the required folder based on the given $SoftwareType
 
+![intune_apps.png](screenshots/intune_apps.png)
+
 ## Version Information
 All configurations have been created and tested with (at least) deviceTRUST Host and Console version `21.1`. Please upgrade accordingly or modify the configurations, if you whitness issues. 
 
