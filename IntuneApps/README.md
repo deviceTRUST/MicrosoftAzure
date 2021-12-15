@@ -1,8 +1,8 @@
 ![dt-logo-full-aot-space-w1280](https://user-images.githubusercontent.com/83282694/116271495-5219b100-a780-11eb-9e1a-f929d2e3cbdc.png)
-## IntuneApps
+## `IntuneApps`
 This section contains scripts and elements for bringing the deviceTRUST installation and config files to your Intune managed devices. It has been developed based on Nickolaj Andersens (@NickolajA)  "IntuneWin32App" PowerShell Module: https://github.com/MSEndpointMgr/IntuneWin32App. Using the module is a requirement for our config to be applied.
 
-## Preparation (`prepare-workstation.ps1`)
+## `Preparation` (`prepare-workstation.ps1`)
 The script `prepare-workstation.ps1` needs to be executed at least once. It prepares your subscription, as well as your machine for bringing the apps to Intune.
 
 - If not already installed, install the required PowerShell Modules.
@@ -24,7 +24,7 @@ Connect-MSGraph -AdminConsent
 
 - Restart your administrative PowerShell Session and you're good to go!
 
-## App installation (`create-dT-intuneapp.ps1`)
+## `App installation` (`create-dT-intuneapp.ps1`)
 The script `create-dT-intuneapp.ps1` creates an Intune application based on your given iput type. Please see the inline comments for details. 
 
 The following parameters need to be set when executing the script. 
@@ -52,7 +52,7 @@ The following command would
 ```PowerShell
 & $ParentPath\create-dT-intuneapp.ps1 -InputFolder "c:\temp\dT-Apps" -SoftwareType dtagent -InstallGroup "Intune Managed Devices" -UninstallGroup "Some Other Group" 
 ```
-## Input Folders
+## `Input Folders`
 The tool for *.intunewin-file creation does always add all files in the folder to the package. We do, thus, highly recommend separating all three software components in each own's folder. Could look like this:
 ```
 - c:\temp\dT-Apps
@@ -65,12 +65,14 @@ The tool for *.intunewin-file creation does always add all files in the folder t
 ```
 The script does automatically scan all child folders of $InputFolder and choses the required folder based on the given $SoftwareType
 
+## `Output`
+The script will create apps in Intune that look like this.
 ![intune_apps.png](../sources/screenshots/intune_apps.png)
 
-## Version Information
+## `Version Information`
 All configurations have been created and tested with (at least) deviceTRUST Host and Console version `21.1`. Please upgrade accordingly or modify the configurations, if you whitness issues. 
 
-## Contributing
+## `Contributing`
 To contribute to the configurations, follow these steps:
 
 - Fork this repository
@@ -80,5 +82,5 @@ To contribute to the configurations, follow these steps:
 - Create the pull request
 - Alternatively see the GitHub documentation on creating a pull request
 
-## Support
+## `Support`
 All content in our GitHub account is released as-is. deviceTRUST does not provide any warranty and no support for any content found here. If you have any issues or comments, please file an issue on the repository.
